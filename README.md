@@ -141,6 +141,9 @@ Seguidamente asignamos en /etc/apache2/sites-available/000-default.conf el domin
   </VirtualHost>
 ```
 
+![imagen](https://user-images.githubusercontent.com/91668406/204242489-4db77f91-5171-4d3e-9b82-87df86db7bf8.png)
+
+
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
 ### ·Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
