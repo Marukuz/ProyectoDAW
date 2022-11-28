@@ -7,14 +7,14 @@ Hacemos un update de los repositorios antes de descargar apache
 ```bash
   sudo apt update 
 ```
-(captura)
+![image](https://user-images.githubusercontent.com/91668406/204348406-73154743-550d-4cdc-a8eb-f0021540c321.png)
 
 Instalamos el paquete de Apache
 
 ```bash
   sudo apt install apache2
 ```
-(captura)
+![image](https://user-images.githubusercontent.com/91668406/204348470-8ed6cf6b-0d26-4261-b15a-f762328bfaf5.png)
 
 Comprobamos que se ha instalado correctamente
 
@@ -22,8 +22,8 @@ Comprobamos que se ha instalado correctamente
 ```bash
   sudo service apache2 status
 ```
-(captura)
 
+![image](https://user-images.githubusercontent.com/91668406/204348509-60de23fc-6f8b-4815-a519-9c20ceef27da.png)
 
 Creamos los dominios en
 ```bash
