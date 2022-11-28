@@ -139,9 +139,18 @@ Seguidamente asignamos en /etc/apache2/sites-available/000-default.conf el domin
 
 Ahora si entramos desde el dominio centro.intranet nos saldrá la pantalla de instalación de wordpress.
 
-(CAPTURA INSTALACION WP)
+![imagen](https://user-images.githubusercontent.com/91668406/204244214-9418f233-431f-4a7b-829b-652b81ec921d.png)
+
 
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
+
+Descargamos el modulo WSGI y lo activamos con el siguiente comando y:
+
+```bash
+  sudo apt install libapache2-mod-wsgi-py3
+  sudo a2enmod wsgi
+```
+![imagen](https://user-images.githubusercontent.com/91668406/204244617-bf68712b-927e-490a-bd15-ef0fdb920e40.png)
 
 ### ·Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
 
