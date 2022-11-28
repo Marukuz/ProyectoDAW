@@ -1,3 +1,3 @@
 # Práctica Servidores web
-# 1º trimestre
+1º trimestre
 
