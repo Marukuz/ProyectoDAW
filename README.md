@@ -44,20 +44,17 @@ Instalamos el modulo PHP:
 ```bash
   sudo apt install php
 ```
-(CAPUTRA)
 
 Instalamos el modulo MYSQL:
 ```bash
   sudo apt install mysql-server
 ```
-(CAPTURA)
-
 
 ### ·Instala y configura wordpress
 
 Entramos a MYSQL
 
-(captura entrando a mysql)
+![image](https://user-images.githubusercontent.com/91668406/204386552-bf21db37-8e19-43fa-a7e3-42c3de108244.png)
 
 Creamos la base de datos para wordpress
 
