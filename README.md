@@ -5,18 +5,14 @@
 Hacemos un update de los repositorios antes de descargar apache
 
 ```bash
-
-  sudo apt update
-  
+  sudo apt update 
 ```
 (captura)
 
 Instalamos el paquete de Apache
 
 ```bash
-
   sudo apt install apache2
-  
 ```
 (captura)
 
@@ -24,9 +20,7 @@ Comprobamos que se ha instalado correctamente
 
 
 ```bash
-
   sudo service apache2 status
-  
 ```
 (captura)
 
