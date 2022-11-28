@@ -143,6 +143,9 @@ Seguidamente asignamos en /etc/apache2/sites-available/000-default.conf el domin
 
 ![imagen](https://user-images.githubusercontent.com/91668406/204242489-4db77f91-5171-4d3e-9b82-87df86db7bf8.png)
 
+Ahora si entramos desde el dominio centro.intranet nos saldrá la pantalla de instalación de wordpress.
+
+(CAPTURA INSTALACION WP)
 
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
