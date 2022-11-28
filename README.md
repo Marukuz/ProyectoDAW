@@ -73,6 +73,34 @@ Creamos un usuario y le ponemos contraseña para gestionar la base de datos y le
 
 ![imagen](https://user-images.githubusercontent.com/91668406/204235224-1e656abe-a1db-451d-906c-979df60eea3a.png)
 
+Entramos en el archivo de configuracion de apache con el siguiente comando:
+
+```bash
+  sudo nano /etc/apache2/sites-available/wordpress.conf
+```
+Y introducimos lo siguiente:
+
+![imagen](https://user-images.githubusercontent.com/91668406/204236161-1e59d670-39ce-40c0-a772-6f85bd3463f9.png)
+
+Activamos el modulo rewrite y reiniciamos el apache:
+
+```bash
+  sudo a2enmod rewrite
+  sudo systemctl restart apache2
+```
+![imagen](https://user-images.githubusercontent.com/91668406/204237994-1ec3733f-b5ce-4bdd-84ff-1073e8217f9c.png)
+
+Ahora descargamos la ultima version de wordpress.
+
+![imagen](https://user-images.githubusercontent.com/91668406/204238917-42eb19a4-eb09-4ceb-affc-f930041a8c89.png)
+
+Seguidamente descomprimimos el archivo descargado con el siguiente comando:
+
+```bash
+  sudo tar zxvf latest.tar.gz
+```
+![imagen](https://user-images.githubusercontent.com/91668406/204239326-ea1b4670-0732-4ff6-91c2-9af5c4310d19.png)
+
 
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
