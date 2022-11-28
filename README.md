@@ -61,6 +61,19 @@ Instalamos el modulo MYSQL:
 
 ### ·Instala y configura wordpress
 
+Entramos a MYSQL
+
+(captura entrando a mysql)
+
+Creamos la base de datos para wordpress
+
+![imagen](https://user-images.githubusercontent.com/91668406/204233684-ecd797ed-0ed5-4300-9e20-ff9f5435f097.png)
+
+Creamos un usuario y le ponemos contraseña para gestionar la base de datos y le damos todos los permisos en la base de datos “wordpress”
+
+![imagen](https://user-images.githubusercontent.com/91668406/204235224-1e656abe-a1db-451d-906c-979df60eea3a.png)
+
+
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
 ### ·Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
