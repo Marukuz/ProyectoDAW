@@ -196,6 +196,37 @@ Y así se vería una vez entramos desde la web:
 
 ### ·Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación
 
+Creamos el archivo con "-c" y seguidamente un usuario con contraseña con el siguiente comando:
+
+```bash
+  htpasswd -c /etc/apache2/.htpasswd marc
+```
+
+![image](https://user-images.githubusercontent.com/91668406/204350024-e68708f1-ee29-4fac-9d73-8198a1748f06.png)
+
+Ahora nos dirigimos al archivo de configuracion de apache2 con el siguiente comando:
+
+```bash
+  sudo nano /etc/apache2/sites-available/000-default.conf
+```
+Y introducimos lo siguiente: 
+
+```bash
+<Directory /var/www/html/app.py>
+        AuthType Basic
+        AuthName "Autenticacion Obligatorio"
+        AuthUserFile /etc/apache2/.htpasswd
+        Require valid-user
+</Directory>
+```
+Como podemos observar hemos restringido nuestra aplicacion python "app.py" para los usuarios que esten dentro del archivo que hemos creado anteriormente con nuestro usuario.
+
+![image](https://user-images.githubusercontent.com/91668406/204351872-a3aa1b0d-10bf-4928-b90f-a008819f5955.png)
+
+Aqui un ejemplo de como se muestra cuando intentamos entrar a la app via web:
+
+![image](https://user-images.githubusercontent.com/91668406/204352063-109afda5-8495-4e17-991a-36019423653b.png)
+
 ### ·Instala y configura awstat.
 
 ### ·Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. 
