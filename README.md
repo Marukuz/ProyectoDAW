@@ -229,5 +229,49 @@ Aqui un ejemplo de como se muestra cuando intentamos entrar a la app via web:
 
 ### ·Instala y configura awstat.
 
+Instalamos awstat con el siguiente comando:
+
+```bash
+  sudo apt install awstats
+```
+
+![image](https://user-images.githubusercontent.com/91668406/204352749-4e43b559-d1db-48af-838c-12645b7c5143.png)
+
+Seguidamente habilitamos el modulo CGI y reiniciamos apache2:
+
+```bash
+  a2enmod cgi
+  systemctl restart apache2
+```
+
+![image](https://user-images.githubusercontent.com/91668406/204352893-121503bd-5815-4a2e-85ab-6fa8fa56bf32.png)
+
+Creamos un archivo de configuracion para el dominio "centro.intranet" en nuestro caso con el siguiente comando:
+
+```bash
+  sudo cp /etc/awstats/awstats.conf /etc/awstats/awstats.centro.intranet.conf
+```
+
+![image](https://user-images.githubusercontent.com/91668406/204356835-157e753f-5fcb-4991-b9fe-eda4051ffaef.png)
+
+Ahora entramos al archivo de configuracion con el siguiente comando:
+
+```bash
+  sudo nano /etc/awstats/awstats.centro.intranet.conf
+``` 
+
+Y cambiamos los siguiente:
+
+```bash
+  SiteDomain=»centro.intranet»
+  HostAliases=»centro.intranet localhost 127.0.0.1″
+```
+
+![image](https://user-images.githubusercontent.com/91668406/204356970-9044e577-23cc-4e43-947b-cd1181ece64b.png)
+
+Finalmente accedemos desde el siguiente link en un navegador "http://centro.intranet/cgi-bin/awstats.pl?config=centro.intranet" y nos mostrara esta web donde estara ejecutado el AWSTATS
+
+![image](https://user-images.githubusercontent.com/91668406/204357303-0a57e50c-73e0-4fdf-917c-bd73d95a4a07.png)
+
 ### ·Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. 
 ###  Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
