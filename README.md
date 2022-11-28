@@ -16,6 +16,20 @@ Y ejecutamos para finalizar y guardar los cambios en el servidor
 
 ### ·Activar los módulos necesarios para ejecutar php y acceder a mysql
 
+Instalamos el modulo PHP:
+
+```bash
+  sudo apt install php
+```
+(CAPUTRA)
+
+Instalamos el modulo MYSQL:
+```bash
+  sudo apt install mysql-server
+```
+(CAPTURA)
+
+
 ### ·Instala y configura wordpress
 
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
