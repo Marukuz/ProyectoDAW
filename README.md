@@ -120,6 +120,27 @@ Finalmente las añadimos al archivo situado en /var/www/wordpress/wp-config.php
 ```bash
   sudo nano /var/www/wordpress/wp-config.php
 ```
+![imagen](https://user-images.githubusercontent.com/91668406/204241528-3d6e3ed6-0467-4864-8b50-4eddcd5a7eca.png)
+
+Al igual que las credenciales de nuestra base de datos creada anteriormente.
+
+![imagen](https://user-images.githubusercontent.com/91668406/204241750-e7d3d294-9111-44c8-a8ee-93db3ad28c8d.png)
+
+Seguidamente asignamos en /etc/apache2/sites-available/000-default.conf el dominio “centro.intranet” al directorio donde esta instalado el wordpress, para, que al entrar por este dominio nos rediriga a wordpress automaticamente.
+
+```bash
+  sudo nano /etc/apache2/sites-available/000-default.conf
+  
+  <VirtualHost*:80>
+    ServerName centro.intranet
+    ServerAlias www.centro.intranet
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/wordpress
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
+```
+
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
 ### ·Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
