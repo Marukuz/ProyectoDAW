@@ -273,5 +273,4 @@ Finalmente accedemos desde el siguiente link en un navegador "http://centro.intr
 
 ![image](https://user-images.githubusercontent.com/91668406/204357303-0a57e50c-73e0-4fdf-917c-bd73d95a4a07.png)
 
-### ·Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. 
-###  Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
+### ·Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”. Debes configurarlo para que sirva en el puerto 8080 y haz los cambios necesarios para ejecutar php. Instala phpmyadmin.
