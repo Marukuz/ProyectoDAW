@@ -154,6 +154,46 @@ Descargamos el modulo WSGI y lo activamos con el siguiente comando y:
 
 ### ·Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
 
+Creamos un script .py con el siguiente comando y introducimos lo siguiente:
+
+```bash
+  sudo nano /var/www/html/app.py
+```
+```python3
+def application(environ, start_response):
+    status = '200 OK'
+    output = b'APP CON PYTHON EJECUTADA DESDE WSGI EN APACHE\n'
+    response_headers = [('Content-type', 'text/plain'),
+                        ('Content-Length', str(len(output)))]
+    start_response(status, response_headers)
+    return [output] 
+```
+
+![imagen](https://user-images.githubusercontent.com/91668406/204246050-815ab779-7925-46ab-8940-793921b951ce.png)
+
+Cambiamos los permisos con el siguiente comando:
+
+```bash
+  sudo chown www-data:www-data /var/www/html/app.py
+  sudo chmod 775 /var/www/html/app.py
+```
+![imagen](https://user-images.githubusercontent.com/91668406/204246606-b1b0d16f-0832-4a30-92c2-0228bef9fa3c.png)
+
+Finalmente añadimos en el archivo /etc/apache2/sites-available/000-default.conf lo siguiente para poder acceder al script mediante “http://departamentos.centro.intranet/app”. 
+
+```bash
+  sudo nano /etc/apache2/sites-available/000-default.conf
+ 
+  WSGIScriptAlias /app /var/www/html/app.py
+```
+
+![imagen](https://user-images.githubusercontent.com/91668406/204247320-bf83e3fa-89ff-4b64-a5ad-3af06402a3a2.png)
+
+Y así se vería una vez entramos desde la web:
+
+![imagen](https://user-images.githubusercontent.com/91668406/204247491-49fbbf5f-03ab-4225-8372-fbe799f8f852.png)
+
+
 ### ·Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación
 
 ### ·Instala y configura awstat.
