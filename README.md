@@ -144,7 +144,7 @@ Ahora si entramos desde el dominio centro.intranet nos saldrá la pantalla de in
 
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
-Descargamos el modulo WSGI y lo activamos con el siguiente comando y:
+Descargamos el modulo WSGI y lo activamos con el siguiente comando:
 
 ```bash
   sudo apt install libapache2-mod-wsgi-py3
