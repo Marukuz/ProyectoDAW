@@ -101,7 +101,25 @@ Seguidamente descomprimimos el archivo descargado con el siguiente comando:
 ```
 ![imagen](https://user-images.githubusercontent.com/91668406/204239326-ea1b4670-0732-4ff6-91c2-9af5c4310d19.png)
 
+Copiamos todo el contenido del directorio temporal al directorio /var/www/wordpress.
 
+```bash
+  sudo cp -a /tmp/wordpress/. /var/www/wordpress
+```
+![imagen](https://user-images.githubusercontent.com/91668406/204240500-705de58a-f035-414d-8503-a9c6065b9a25.png)
+
+A continuacion hacemos ejecutamos el siguiente comando para conseguir las claves de seguridad del generador de wordpress.
+
+```bash
+  curl -s https://api.wordpress.org/secret-key/1.1/salt/
+```
+![imagen](https://user-images.githubusercontent.com/91668406/204241097-cd4de46c-8d40-4467-b248-cf01dc5bdc65.png)
+
+Finalmente las añadimos al archivo situado en /var/www/wordpress/wp-config.php
+
+```bash
+  sudo nano /var/www/wordpress/wp-config.php
+```
 ### ·Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
 
 ### ·Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente.
